@@ -95,6 +95,20 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(80),
+              child: Column(
+                children: const [
+                  TextField(
+                    decoration: InputDecoration(
+                      border: UnderlineInputBorder(),
+                      labelText: "Digite seu email",
+                      fillColor: Colors.grey,
+                      ),
+                    ),
+                ],
+              ),
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
