@@ -1,6 +1,6 @@
 # App RioMafra Padel
 
-Um projeto desenvolvido em Flutter/Dart para o clube esportivo RioMafra Padel!
+Um projeto desenvolvido em Flutter/Dart e Firebase para o clube esportivo RioMafra Padel!
 
 ## Desenvolvimento Mobile & Gerência de Projetos
 
