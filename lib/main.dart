@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   TextField(
                     decoration: InputDecoration(
                       border: UnderlineInputBorder(),
-                      labelText: "Digite seu e-mail",
+                      labelText: "Digite seu email",
                       fillColor: Colors.grey,
                       ),
                     ),
