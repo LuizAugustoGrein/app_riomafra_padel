@@ -1,5 +1,7 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:app_riomafra_padel/widgets/home_small_card.dart';
+import 'package:app_riomafra_padel/widgets/home_large_card.dart';
+import 'package:app_riomafra_padel/widgets/bottom_nav_bar.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -40,46 +42,54 @@ class _HomeState extends State<Home> {
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
-        padding: EdgeInsets.all(40),
         child: Column(
-
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 20,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image(
+                      height: 200,
+                      width: MediaQuery.of(context).size.width,
+                      image: const AssetImage('assets/image1.png'),
+                    ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 60,
+                right: 5,
+                left: 5,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  SmallCard(image: 'assets/image2.png', description: 'Meus próximos jogos'),
+                  SmallCard(image: 'assets/image3.png', description: 'Histórico de jogos'),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 20,
+                right: 5,
+                left: 5,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  LargeCard(image: 'assets/searchicon.png', description: ' Reservar quadra'),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
-      bottomNavigationBar:  BottomNavigationBar(
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.red.shade900,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Colors.white,
-              size: 25,
-              ),
-            tooltip: "Home",
-            label: ''     
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.add_circle,
-              color: Colors.white,
-              size: 30,
-            ),
-            tooltip: 'Reservar Quadra',
-            label: ''
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Colors.white,
-              size: 25,
-            ),
-            tooltip: 'Meu Perfil',
-            label: ''
-          ),
-        ]
-      ),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }
