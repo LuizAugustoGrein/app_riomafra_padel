@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:app_riomafra_padel/widgets/home_small_card.dart';
-import 'package:app_riomafra_padel/widgets/home_large_card.dart';
-import 'package:app_riomafra_padel/widgets/bottom_nav_bar.dart';
+import 'package:app_riomafra_padel/widgets/home/home_small_card.dart';
+import 'package:app_riomafra_padel/widgets/home/home_large_card.dart';
+import 'package:app_riomafra_padel/widgets/home/bottom_nav_bar.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -21,18 +21,25 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.red.shade900,
         title: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
-                icon: const Icon(Icons.format_list_bulleted),
+                icon: const Icon(
+                  Icons.format_list_bulleted, 
+                  size: 33,
+                ),
                 tooltip: 'Mais opções',
                 onPressed: () {},
               ),
               IconButton(
-                icon: const Icon(Icons.notifications),
+                icon: const Icon(
+                  Icons.notifications, 
+                  size: 33,
+                ),
                 tooltip: 'Notificações',
                 onPressed: () {},
               ),

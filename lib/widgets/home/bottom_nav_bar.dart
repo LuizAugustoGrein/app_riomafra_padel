@@ -16,7 +16,7 @@ class BottomNavBar extends StatelessWidget {
           icon: Icon(
             Icons.home,
             color: Colors.white,
-            size: 25,
+            size: 35,
             ),
           tooltip: "Home",
           label: ''     
@@ -25,7 +25,7 @@ class BottomNavBar extends StatelessWidget {
           icon: Icon(
             Icons.add_circle,
             color: Colors.white,
-            size: 30,
+            size: 35,
           ),
           tooltip: 'Reservar Quadra',
           label: ''
@@ -34,7 +34,7 @@ class BottomNavBar extends StatelessWidget {
           icon: Icon(
             Icons.person,
             color: Colors.white,
-            size: 25,
+            size: 35,
           ),
           tooltip: 'Meu Perfil',
           label: ''

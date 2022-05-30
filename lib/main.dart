@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:app_riomafra_padel/screens/login.dart';
+import 'package:app_riomafra_padel/screens/register.dart';
 import 'package:app_riomafra_padel/screens/home.dart';
 
 void main() {
@@ -20,7 +22,9 @@ class App extends StatelessWidget {
       // iniciando o conceito de navegação por rotas
       initialRoute: "/",
       routes: {
-        "/": (context) => const Home(),
+        "/": (context) => const Login(),
+        "/register": (context) => const Register(),
+        "/home": (context) => const Home(),
       },
     );
   }
